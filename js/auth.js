@@ -11,7 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
         btn.disabled = true;
         btn.innerText = "Carregando...";
 
-        const resposta = await fetch("http://localhost:8080/auth/login", {
+        const resposta = await fetch("https://ocorrencia-tecnoponto.onrender.com/auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
