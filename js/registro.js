@@ -34,7 +34,7 @@ document.getElementById("formOcorrencia").addEventListener("submit", async (e) =
         btn.disabled = true;
         btn.innerText = "Carregando...";
 
-        const resposta = await fetch("https://ocorrencia-tecnoponto.onrender.com/ocorrencia", {
+        const resposta = await fetch(`${CONFIG.API_URL}/ocorrencia`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",

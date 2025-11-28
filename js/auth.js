@@ -11,7 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
         btn.disabled = true;
         btn.innerText = "Carregando...";
 
-        const resposta = await fetch("https://ocorrencia-tecnoponto.onrender.com/auth/login", {
+        const resposta = await fetch(`${CONFIG.API_URL}/auth/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
@@ -23,7 +23,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
         if (resposta.ok && texto.includes("sucesso")) {
             showToast("Login realizado com sucesso!", "success");
             setTimeout(() => {
-                window.location.href = "http://127.0.0.1:5500/registro.html";
+                window.location.href = "registro.html";
             }, 1000); // Wait a bit for the toast
         } else {
             showToast(texto, "error");
