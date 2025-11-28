@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Import Toast Styles */
+@import url('toast.css');
+
+/* Page Transition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: #f0f2f5;
+
+    background-image: url("../background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Apply Animation */
+    animation: fadeIn 0.6s ease-out;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+
+    /* Card Branco Sólido com leve transparência */
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(10px);
+
+    /* Borda sutil para separar do fundo */
+    border: 1px solid #fff;
+    border-radius: 24px;
+
+    text-align: center;
+    /* Sombra suave para dar destaque no fundo branco */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    max-width: 160px;
+    margin-bottom: 10px;
+}
+
+/* Títulos agora são ESCUROS */
+h2 {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    /* Label cinza escuro */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+
+    /* Input com fundo cinza para destacar no card branco */
+    background: #e9ecef;
+    border: 1px solid transparent;
+
+    color: #333;
+    /* Texto digitado escuro */
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+input:focus {
+    background: #fff;
+    border-color: #1D6089;
+    box-shadow: 0 0 0 4px rgba(29, 96, 137, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+
+    /* Mantive o azul da Tecnoponto */
+    background: #1D6089;
+
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    background: #14425e;
+    transform: translateY(-2px);
+}
+
+.msg {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #d9534f;
+    /* Vermelho para erro */
+}

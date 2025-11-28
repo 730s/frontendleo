@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Ocorrência - Tecnoponto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/toast.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="register-card">
+
+            <h2>Nova Ocorrência</h2>
+            <p class="subtitle">Preencha os dados do chamado abaixo</p>
+
+            <form id="formOcorrencia">
+
+                <div class="input-group">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" placeholder="00.000.000/0001-00" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="emailAcesso">Email de Acesso</label>
+                    <input type="email" id="emailAcesso" placeholder="cliente@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="unidade">Unidade de Negócio</label>
+                    <input type="text" id="unidade" placeholder="unidade de negócio" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="erro">Tipo de Erro</label>
+                    <select id="erro" required>
+                        <option value="" disabled selected>Selecione o erro...</option>
+                        <option>SEM UNIDADE DE NEGOCIO</option>
+                        <option>SISTEMA EXPIRADO</option>
+                        <option>LOGIN NAO ENCONTRADO</option>
+                        <option>SISTEMA INATIVO</option>
+                        <option>SEM BH</option>
+                        <option>BH INCOMPLETO</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="input-group half">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option>EM ABERTO</option>
+                            <option>AJUSTADO</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group half">
+                        <label for="prioridade">Prioridade</label>
+                        <select id="prioridade">
+                            <option>BAIXA</option>
+                            <option>MEDIA</option>
+                            <option>ALTA</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">Registrar Ocorrência</button>
+            </form>
+
+            <p id="msg" class="msg"></p>
+        </div>
+    </div>
+
+    <script src="js/toast.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+
+</html>
