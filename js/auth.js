@@ -23,7 +23,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
         if (resposta.ok && texto.includes("sucesso")) {
             showToast("Login realizado com sucesso!", "success");
             setTimeout(() => {
-                window.location.href = "registro.html";
+                window.location.href = "menu.html";
             }, 1000); // Wait a bit for the toast
         } else {
             showToast(texto, "error");

@@ -5,10 +5,8 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Import Toast Styles */
 @import url('toast.css');
 
-/* Page Transition */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -34,7 +32,6 @@ body {
     align-items: center;
     justify-content: center;
 
-    /* Apply Animation */
     animation: fadeIn 0.6s ease-out;
 }
 
@@ -50,16 +47,13 @@ body {
     max-width: 400px;
     padding: 40px;
 
-    /* Card Branco Sólido com leve transparência */
     background: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(10px);
 
-    /* Borda sutil para separar do fundo */
     border: 1px solid #fff;
     border-radius: 24px;
 
     text-align: center;
-    /* Sombra suave para dar destaque no fundo branco */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -68,7 +62,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Títulos agora são ESCUROS */
 h2 {
     color: #333;
     font-size: 28px;
@@ -92,7 +85,6 @@ label {
     display: block;
     margin-bottom: 8px;
     color: #444;
-    /* Label cinza escuro */
     font-size: 14px;
     font-weight: 500;
 }
@@ -102,12 +94,10 @@ input {
     padding: 14px 16px;
     border-radius: 12px;
 
-    /* Input com fundo cinza para destacar no card branco */
     background: #e9ecef;
     border: 1px solid transparent;
 
     color: #333;
-    /* Texto digitado escuro */
     font-size: 15px;
     transition: 0.3s;
 }
@@ -127,7 +117,6 @@ button {
     padding: 14px;
     margin-top: 10px;
 
-    /* Mantive o azul da Tecnoponto */
     background: #1D6089;
 
     color: white;
@@ -148,5 +137,4 @@ button:hover {
     margin-top: 20px;
     font-size: 14px;
     color: #d9534f;
-    /* Vermelho para erro */
 }
