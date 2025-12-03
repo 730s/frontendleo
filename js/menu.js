@@ -68,7 +68,11 @@ function renderOcorrencias(ocorrencias) {
 
     let html = '';
     ocorrencias.forEach(oc => {
-        const statusClass = oc.status === 'EM ABERTO' ? 'status-aberto' : 'status-ajustado';
+        let statusClass = '';
+        if (oc.status === 'EM ABERTO') statusClass = 'status-aberto';
+        else if (oc.status === 'AJUSTADO') statusClass = 'status-ajustado';
+        else if (oc.status === 'DESENVOLVIMENTO') statusClass = 'status-desenvolvimento';
+
         html += `
             <div class="ocorrencia-item">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
@@ -105,6 +109,9 @@ function filterOcorrencias(status) {
 
     if (status === 'TODAS') {
         renderOcorrencias(allOcorrencias);
+    } else if (status === 'EM ABERTO') {
+        const filtered = allOcorrencias.filter(oc => oc.status === 'EM ABERTO' || oc.status === 'DESENVOLVIMENTO');
+        renderOcorrencias(filtered);
     } else {
         const filtered = allOcorrencias.filter(oc => oc.status === status);
         renderOcorrencias(filtered);
