@@ -43,12 +43,10 @@
                     <label for="erro">Tipo de Erro</label>
                     <select id="erro" required>
                         <option value="" disabled selected>Selecione o erro...</option>
-                        <option>SEM UNIDADE DE NEGOCIO</option>
-                        <option>BASE SEM INFORMACOES</option>
-                        <option>SISTEMA EXPIRADO</option>
-                        <option>LOGIN NAO ENCONTRADO</option>
-                        <option>SISTEMA INATIVO</option>
+                        <!-- Options will be populated dynamically -->
                     </select>
+                    <input type="text" id="erroPersonalizado" placeholder="Digite o erro..."
+                        style="display: none; margin-top: 10px;" required disabled>
                 </div>
 
                 <div class="row">
